@@ -6,11 +6,19 @@ const Restaurants = [
         deliveryTime: '30mins',
         rating: '5/5',
         image: require('./Components/Restaurant/nasty-burger.jpeg'),
-        menu: {
-            item: 'Nasty Burger Meal',
-            description: 'Double patty with lettuce, caramalized onions, pickles and nasty sawce. Comes with a side of fries and soft drink of your choice',
+        menu: [
+            {
+                item: 'Nasty Burger Meal',
+                description: 'Double patty with lettuce, caramalized onions, pickles and nasty sawce. Comes with a side of fries and soft drink of your choice',
+                price: 'KD 5.000'
+        },
+        {
+            item: 'Chicken Burger Meal',
+            description: 'Chicken breast patty with lettuce, garlic mayo, pickles and nasty sawce. Comes with a side of fries and soft drink of your choice',
             price: 'KD 5.000'
         }
+    ]
+        
 },
     {
     id: 2,
@@ -19,11 +27,13 @@ const Restaurants = [
         deliveryTime: '25mins',
         rating: '5/5',
         image: require('./Components/Restaurant/kena.jpeg'),
-        menu: {
+        menu: [
+            {
             item: 'Kena Burger Meal',
             description: 'Double patty with lettuce, caramalized onions, pickles and bog bawse sawce. Comes with a side of fries and soft drink of your choice',
             price: 'KD 5.000'
         }
+    ]
     
     }
 ]

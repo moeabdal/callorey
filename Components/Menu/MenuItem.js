@@ -51,21 +51,32 @@ const styles = StyleSheet.create({
 
 const MenuItem = (props) => {
     const menu = props.item.menu
+    console.log(menu)
     return (
-        <ScrollView>
-        <TouchableOpacity>
-        <View style={styles.container}>
-            <View style={styles.rowContainter}>
-            <View style={styles.contentContainer}>
-                <Text style={styles.title}>{menu.item}</Text>
-                <Text style={styles.content}>{menu.description}</Text>
-            </View>
-            <Image style={styles.imageContainer} source={require('../Restaurant/nasty-burger.jpeg')} />
-            </View>
+        <View>
+            <FlatList
+            data={menu}
+            renderItem={({item}) => 
+                    (
+                <TouchableOpacity>
+                    <View style={styles.container}>
+                        <View style={styles.rowContainter}>
+                            <View style={styles.contentContainer}>
+                                <Text style={styles.title}>{item.item}</Text>
+                                <Text style={styles.content}>{item.description}</Text>
+                            </View>
+                            <Image style={styles.imageContainer} source={require('../Restaurant/nasty-burger.jpeg')} />
+                        </View>
+                    </View>
+                </TouchableOpacity>
+                    )
+                    }
+            />
         </View>
-        </TouchableOpacity>
-        </ScrollView>
+       
     )
 }
 
 export default MenuItem
+
+ 
