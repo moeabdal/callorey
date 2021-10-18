@@ -19,8 +19,7 @@ const styles = StyleSheet.create({
         shadowOffset: {width: 1, height: 1},
         shadowOpacity: 0.5,
         color: '#000',
-        textAlign: 'left',
-        marginBottom: 30,
+        textAlign: 'left'
     },
     menuContainer: {
         textAlign: 'left',
@@ -35,9 +34,10 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         color: '#000',
         textAlign: 'left',
+        marginTop: 30
     },
     sectionContainer: {
-        marginTop: 10
+        marginTop: 15
     }
 })
 
@@ -50,6 +50,18 @@ const Menu = ({ route, navigation }) => {
                 <View style={styles.menuContainer}>
                     <Text style={styles.title}>{item.title}</Text>
                         <Text style={styles.sectionHeader}>Appetizers</Text>
+                    <View style={styles.sectionContainer}>
+                        <MenuItem item={item} />
+                    </View>
+                        <Text style={styles.sectionHeader}>Main courses</Text>
+                    <View style={styles.sectionContainer}>
+                        <MenuItem item={item} />
+                    </View>
+                    <Text style={styles.sectionHeader}>Desserts</Text>
+                    <View style={styles.sectionContainer}>
+                        <MenuItem item={item} />
+                    </View>
+                    <Text style={styles.sectionHeader}>Drinks</Text>
                     <View style={styles.sectionContainer}>
                         <MenuItem item={item} />
                     </View>

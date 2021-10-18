@@ -15,16 +15,13 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 16,
-        textAlign: 'left',
         color: '#666',
         textAlign: 'left',
         padding: 2
     },
     content: {
         fontSize: 15,
-        textAlign: 'left',
         color: '#999',
-        textAlign: 'left',
         padding: 2,
         flexWrap: 'wrap'
     },
@@ -37,7 +34,7 @@ const styles = StyleSheet.create({
         borderColor: '#ccc',
         height: 60,
         width: 70,
-        marginTop: 10
+        marginTop: 26
     },
     rowContainter: {
         color: '#0f0',
@@ -46,6 +43,10 @@ const styles = StyleSheet.create({
       },
     contentContainer: {
         width: 290,
+    },
+    cardFooter: {
+        flexDirection: 'row',
+        alignContent: 'space-between'
     }
 })
 
@@ -67,10 +68,16 @@ const MenuItem = (props) => {
                             </View>
                             <Image style={styles.imageContainer} source={require('../Restaurant/nasty-burger.jpeg')} />
                         </View>
+                        <View style={styles.cardFooter}>
+                            <View style={styles.contentContainer}>
+                            <Text style={styles.content}>{item.price}</Text>
+                            </View>
+                                <Text style={styles.content}>{item.callories} kCal</Text>
+                            </View>
                     </View>
                 </TouchableOpacity>
                     )
-                    }
+                }
             />
         </View>
        
