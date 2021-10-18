@@ -1,6 +1,5 @@
-import { CustomConsole } from '@jest/console';
+import { useRoute } from '@react-navigation/core';
 import React from 'react'
-
 import { FlatList, StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -50,26 +49,16 @@ const styles = StyleSheet.create({
     }
 })
 
-const MenuItem = () => {
+const MenuItem = (props) => {
+    const menu = props.item.menu
     return (
         <ScrollView>
         <TouchableOpacity>
         <View style={styles.container}>
             <View style={styles.rowContainter}>
             <View style={styles.contentContainer}>
-                <Text style={styles.title}>Menu Item</Text>
-                <Text style={styles.content}>This is a description of the menu item. it is continued on this line to see the effect it has.</Text>
-            </View>
-            <Image style={styles.imageContainer} source={require('../Restaurant/nasty-burger.jpeg')} />
-            </View>
-        </View>
-        </TouchableOpacity>
-        <TouchableOpacity>
-        <View style={styles.container}>
-            <View style={styles.rowContainter}>
-            <View style={styles.contentContainer}>
-                <Text style={styles.title}>Menu Item</Text>
-                <Text style={styles.content}>This is a description of the menu item. it is continued on this line to see the effect it has.</Text>
+                <Text style={styles.title}>{menu.item}</Text>
+                <Text style={styles.content}>{menu.description}</Text>
             </View>
             <Image style={styles.imageContainer} source={require('../Restaurant/nasty-burger.jpeg')} />
             </View>

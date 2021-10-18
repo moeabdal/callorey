@@ -41,17 +41,17 @@ const styles = StyleSheet.create({
     }
 })
 
-const Menu = () => {
-
+const Menu = ({ route, navigation }) => {
+    const item  = route.params
     return (
         <ScrollView>
             <View>
-                <Image style={styles.image} source={require('../Restaurant/nasty-burger.jpeg')}/>
+                <Image style={styles.image} source={item.image}/>
                 <View style={styles.menuContainer}>
-                    <Text style={styles.title}>Nasty Burger</Text>
+                    <Text style={styles.title}>{item.title}</Text>
                         <Text style={styles.sectionHeader}>Appetizers</Text>
                     <View style={styles.sectionContainer}>
-                        <MenuItem />
+                        <MenuItem item={item} />
                     </View>
                 </View>
             </View>

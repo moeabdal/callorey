@@ -75,7 +75,7 @@ const RestaurantItem = ({navigation}) => {
                 renderItem={({item}) => 
                 (
                     <View style={styles.container}>
-                      <TouchableOpacity>
+                      <TouchableOpacity onPress={() => navigation.navigate('MenuScreen',  item )}>
                         <Image style={styles.imageContainer} source={item.image} />
                         <Text style={styles.cardTitle}>{item.title}</Text>
                         <View>

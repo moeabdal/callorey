@@ -1,12 +1,13 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button} from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Components
 import RestaurantItem from './Components/Restaurant/RestaurantItem'
 import Menu from './Components/Menu/Menu'
-import MenuItem from './Components/Menu/MenuItem'
+import Profile from './Components/Authentication/Profile/Profile'
+import ProfileButton from './Components/Authentication/Profile/ProfileButton'
 
 
 const Stack = createNativeStackNavigator();
@@ -35,6 +36,19 @@ export default function App() {
         >
         <Stack.Screen name="ListScreen" 
         component={RestaurantItem} 
+        options={{
+          title: 'Callorey',
+          headerRight: () => (
+            <ProfileButton />
+          ),
+        }}
+        />
+        <Stack.Screen name="MenuScreen" 
+        component={Menu} 
+        options={{ title: 'Callorey' }}
+        />
+        <Stack.Screen name="ProfileScreen" 
+        component={Profile} 
         options={{ title: 'Callorey' }}
         />
       </Stack.Navigator>
