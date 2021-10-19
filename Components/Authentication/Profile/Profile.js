@@ -31,6 +31,18 @@ const Profile = () => {
                     <List.Item title="Address 2" />
                     <List.Item title="Address 3" />
                 </List.Accordion>
+                <List.Accordion
+                    title="Wallet"
+                    left={props => <List.Icon {...props} icon="folder" />}
+                    >
+                    <List.Item title="Available Credit: " />
+                </List.Accordion>
+                <List.Accordion
+                    title="Subscription History"
+                    left={props => <List.Icon {...props} icon="folder" />}
+                    >
+                    <List.Item title="Restaurant: " />
+                </List.Accordion>
             </List.Section>
         </View>
     )

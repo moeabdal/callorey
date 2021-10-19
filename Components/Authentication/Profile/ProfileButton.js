@@ -10,7 +10,7 @@ const ProfileButton = () => {
         <TouchableOpacity>
             <Button
                 title="Profile"
-                color="#000"
+                color="#fff"
                 onPress={handlePress}
                 />
         </TouchableOpacity>
