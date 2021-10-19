@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
 
 const MenuItem = (props) => {
     const menu = props.item.menu
-    console.log(menu)
     return (
         <View>
             <FlatList
@@ -70,7 +69,7 @@ const MenuItem = (props) => {
                         </View>
                         <View style={styles.cardFooter}>
                             <View style={styles.contentContainer}>
-                            <Text style={styles.content}>{item.price}</Text>
+                                <Text style={styles.content}>{item.price}</Text>
                             </View>
                                 <Text style={styles.content}>{item.callories} kCal</Text>
                             </View>

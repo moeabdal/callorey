@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import { FlatList, StyleSheet, Text, View, ScrollView, Image, SafeAreaView } from 'react-native';
 
 // Components
 import MenuItem from './MenuItem'

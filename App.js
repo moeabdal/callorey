@@ -51,7 +51,7 @@ export default function App() {
         component={Profile} 
         options={{ title: 'Callorey' }}
         />
-      </Stack.Navigator>
+        </Stack.Navigator>
     </NavigationContainer>
   );
 }
