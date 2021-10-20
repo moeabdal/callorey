@@ -8,7 +8,7 @@ import RestaurantItem from './Components/Restaurant/RestaurantItem'
 import Menu from './Components/Menu/Menu'
 import Profile from './Components/Authentication/Profile/Profile'
 import ProfileButton from './Components/Authentication/Profile/ProfileButton'
-
+import Prof from './Components/Authentication/Profile/Prof'
 
 const Stack = createNativeStackNavigator();
 
@@ -48,7 +48,7 @@ export default function App() {
         options={{ title: 'Callorey' }}
         />
         <Stack.Screen name="ProfileScreen" 
-        component={Profile} 
+        component={Prof} 
         options={{ title: 'Callorey' }}
         />
         </Stack.Navigator>
