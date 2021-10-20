@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#666',
         textAlign: 'left',
-        padding: 2
+        padding: 2,
+        marginBottom: '2%'
     },
     content: {
         fontSize: 15,
@@ -32,17 +33,19 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         borderWidth: 1,
         borderColor: '#ccc',
-        height: 60,
-        width: 70,
-        marginTop: 26
+        height: '70%',
+        width: '18%',
+        marginTop: '5%',
     },
     rowContainter: {
         color: '#0f0',
         flexDirection: 'row',
-        alignContent: 'space-between'
+        alignContent: 'space-between',
       },
     contentContainer: {
-        width: 290,
+        width: '80%',
+        marginBottom: '5%',
+        paddingRight: '5%'
     },
     cardFooter: {
         flexDirection: 'row',

@@ -22,8 +22,8 @@ imageContainer: {
     shadowOpacity: 0.5,
     borderWidth: 1,
     borderColor: '#ccc',
-    height: 200,
-    width: 373,
+    height: '90%',
+    width: '100%',
     flex: 1,
     alignItems: 'center',
     position: 'absolute'

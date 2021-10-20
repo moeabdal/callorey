@@ -7,8 +7,8 @@ import MenuItem from './MenuItem'
 
 const styles = StyleSheet.create({
     image: {
-        height: 190,
-        width: 400,
+        height: '15%',
+        width: '100%',
         alignItems: 'center'
     },
     title: {
