@@ -6,8 +6,13 @@ import MenuItem from './MenuItem'
 
 
 const styles = StyleSheet.create({
+    container : {
+        height: '100%',
+        width: '100%',
+        flex: 1,
+    },
     image: {
-        height: '15%',
+        height: '10%',
         width: '100%',
         alignItems: 'center'
     },
@@ -44,7 +49,7 @@ const styles = StyleSheet.create({
 const Menu = ({ route, navigation }) => {
     const item  = route.params
     return (
-        <ScrollView>
+        <ScrollView style={styles.container}>
             <View>
                 <Image style={styles.image} source={item.image}/>
                 <View style={styles.menuContainer}>

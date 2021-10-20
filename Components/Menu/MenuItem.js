@@ -10,15 +10,17 @@ const styles = StyleSheet.create({
         shadowOpacity: 1,
         shadowOffset: {width: 1, height: 1},
         borderRadius: 4,
-        height: 130,
-        margin: 1
+        margin: '0.5%',
+        alignContent: 'center',
+        alignItems: 'center',
+        flex: 1
     },
     title: {
         fontSize: 16,
         color: '#666',
         textAlign: 'left',
         padding: 2,
-        marginBottom: '2%'
+        marginBottom: '2%',
     },
     content: {
         fontSize: 15,
@@ -34,8 +36,9 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#ccc',
         height: '70%',
-        width: '18%',
+        width: '20%',
         marginTop: '5%',
+        padding: '1%'
     },
     rowContainter: {
         color: '#0f0',
@@ -45,7 +48,7 @@ const styles = StyleSheet.create({
     contentContainer: {
         width: '80%',
         marginBottom: '5%',
-        paddingRight: '5%'
+        padding: '1%'
     },
     cardFooter: {
         flexDirection: 'row',
