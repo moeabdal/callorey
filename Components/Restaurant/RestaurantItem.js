@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { FlatList, SectionList, StyleSheet, Text, View, ScrollView, Image, TouchableOpacity, SafeAreaView, StatusBar } from 'react-native';
 import Restaurants from '../../data'
 
 
@@ -63,8 +63,10 @@ cardTitle: {
     shadowOffset: {width: 1, height: 1},
     shadowOpacity: 0.9,
     marginLeft: 5
-  }
-});
+  },
+}
+);
+
 
 const RestaurantItem = ({navigation}) => {
     const data = Restaurants

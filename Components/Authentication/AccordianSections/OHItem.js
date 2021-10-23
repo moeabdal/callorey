@@ -1,7 +1,9 @@
-import React from 'react';
-import { TouchableOpacity, FlatList, StyleSheet, Text, View, ScrollView, Image, SafeAreaView, SectionList } from 'react-native';
-import Restaurants from '../../data'
+import { useRoute } from '@react-navigation/core';
+import React from 'react'
+import { SafeAreaView, FlatList, StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
 
+// Data
+import Profiles from '../../../profile-data';
 
 const styles = StyleSheet.create({
     container: {
@@ -78,44 +80,40 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         width: '79%'
     }
-})
+});
 
-const Menu = ({route}) => {
-    const menu = route.params.menu
-    return (
-<SafeAreaView style={styles.container}>
-    <SectionList
-      sections={menu}
-      keyExtractor={(item, index) => item + index}
-      renderItem={({ item }) => 
-      <TouchableOpacity>
+const OHItem = () => {
+    const orders = Profiles[0].orderHistory
+    const renderItem = ({ item }) => (
+              <TouchableOpacity>
                     <View style={styles.container}>
                         <View style={styles.rowContainter}>
                             <View style={styles.contentContainer}>
-                                <Text style={styles.cardTitle}>{item.item}</Text>
-                                <Text style={styles.content}>{item.description}</Text>
+                                <Text style={styles.cardTitle}>{item.restaurant}</Text>
+                                <Text style={styles.content}>Date: {item.date}</Text>
                             </View>
-                            <Image style={styles.imageContainer} source={require('../Restaurant/nasty-burger.jpeg')} />
+                            <Image style={styles.imageContainer} source={require('../../Restaurant/nasty-burger.jpeg')} />
                         </View>
                         <View style={styles.cardFooter}>
                             <View style={styles.footerContentContainer}>
-                                <Text>{item.price}</Text>
-                            </View>
-                            <View style={styles.footerContentContainer}>
-                                <Text>{item.callories} kCal</Text>
+                                <Text>Total {item.total}</Text>
                             </View>
                             </View>
                     </View>
                 </TouchableOpacity>   
-      
-      }
-      renderSectionHeader={({ section: { title } }) => (
-        <Text style={styles.title}>{title}</Text>
-      )}
-    />
-      
-  </SafeAreaView>
+      );
+    return (
+        <SafeAreaView style={styles.container}>
+            <FlatList
+                data={orders}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+            />
+        </SafeAreaView>
+       
     )
 }
 
-export default Menu
+export default OHItem
+
+ 

@@ -6,7 +6,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Components
 import RestaurantItem from './Components/Restaurant/RestaurantItem'
 import Menu from './Components/Menu/Menu'
-import Profile from './Components/Authentication/Profile/Profile'
 import ProfileButton from './Components/Authentication/Profile/ProfileButton'
 import Prof from './Components/Authentication/Profile/Prof'
 
@@ -37,7 +36,7 @@ export default function App() {
         <Stack.Screen name="ListScreen" 
         component={RestaurantItem} 
         options={{
-          title: 'Callorey',
+          title: 'Calorey',
           headerRight: () => (
             <ProfileButton />
           ),
@@ -45,11 +44,11 @@ export default function App() {
         />
         <Stack.Screen name="MenuScreen" 
         component={Menu} 
-        options={{ title: 'Callorey' }}
+        options={{ title: 'Calorey' }}
         />
         <Stack.Screen name="ProfileScreen" 
         component={Prof} 
-        options={{ title: 'Callorey' }}
+        options={{ title: 'Calorey' }}
         />
         </Stack.Navigator>
     </NavigationContainer>

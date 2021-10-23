@@ -36,7 +36,7 @@ const Wallet = () => {
             </Row>
             <Row style={{ height:expand }}>
                 <View style={styles.cellContent}>
-                    <Text style={styles.cellHeader}>Section</Text>  
+                    <Text style={styles.cellHeader}>Available Credit: KD10.750</Text>  
                  </View>
             </Row>
         </TouchableOpacity>

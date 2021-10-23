@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Row } from 'react-native-easy-grid';
 
+// Components
+import PIItem from '../AccordianSections/PIItem'
+
 const styles = StyleSheet.create({
     cell: {
         borderWidth: 1,
@@ -17,7 +20,6 @@ const styles = StyleSheet.create({
       cellContent: {
         justifyContent: 'center',
         alignItems: 'center',
-        flex: 1,
         backgroundColor: '#fff',
       }
 })
@@ -35,8 +37,8 @@ const PersonalInformation = () => {
                 </View>
             </Row>
             <Row style={{ height:expand }}>
-                <View style={styles.cellContent}>
-                    <Text style={styles.cellHeader}>Section</Text>  
+                <View>
+                    <PIItem />
                  </View>
             </Row>
         </TouchableOpacity>

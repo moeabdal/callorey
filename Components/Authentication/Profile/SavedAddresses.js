@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Row } from 'react-native-easy-grid';
 
+//Components
+import SAItems from '../AccordianSections/SAItems';
+
 const styles = StyleSheet.create({
     cell: {
         borderWidth: 1,
@@ -36,7 +39,7 @@ const SavedAddresses = () => {
             </Row>
             <Row style={{ height:expand }}>
                 <View style={styles.cellContent}>
-                    <Text style={styles.cellHeader}>Section</Text>  
+                    <SAItems />  
                  </View>
             </Row>
         </TouchableOpacity>

@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
 })
 
 const Prof = () => {
-
     return (
         <ScrollView>
         <View style={styles.container}>

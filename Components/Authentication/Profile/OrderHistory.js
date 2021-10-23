@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Row } from 'react-native-easy-grid';
 
+// Components
+import OHItem from '../AccordianSections/OHItem';
+
 const styles = StyleSheet.create({
     cell: {
         borderWidth: 1,
@@ -37,7 +40,7 @@ const OrderHistory = () => {
             <ScrollView>
             <Row style={{ height:expand }}>
                     <View style={styles.cellContent}>
-                        <Text style={styles.cellHeader}>Section</Text> 
+                        <OHItem /> 
                     </View>
             </Row>
             </ScrollView>
